@@ -20,51 +20,51 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{46FD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebGateway", "WebGateway", "{60322427-9A2E-4487-8651-0E864E7B62C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Api.Gateway", "src\ApiGateways\WebGateway\Web.Api.Gateway\Web.Api.Gateway.csproj", "{146B03B9-27D3-47AF-8E40-9BC24ED48450}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Api.Gateway", "src\ApiGateways\WebGateway\Web.Api.Gateway\Web.Api.Gateway.csproj", "{146B03B9-27D3-47AF-8E40-9BC24ED48450}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{9D79DFEB-D8F5-4C11-BBC5-BD71EA34045B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Base", "src\BuildingBlocks\EventBus\EventBus.Base\EventBus.Base.csproj", "{992D670B-000B-443F-BAD3-42EED63DE84D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Base", "src\BuildingBlocks\EventBus\EventBus.Base\EventBus.Base.csproj", "{992D670B-000B-443F-BAD3-42EED63DE84D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Factory", "src\BuildingBlocks\EventBus\EventBus.Factory\EventBus.Factory.csproj", "{188C68AA-9A63-4284-9FE5-0EB50CB31203}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.AzureServiceBus", "src\BuildingBlocks\EventBus\EventBus.AzureServiceBus\EventBus.AzureServiceBus.csproj", "{82882714-CD26-4269-8621-C054A0B85118}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.AzureServiceBus", "src\BuildingBlocks\EventBus\EventBus.AzureServiceBus\EventBus.AzureServiceBus.csproj", "{82882714-CD26-4269-8621-C054A0B85118}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.RabbitMq", "src\BuildingBlocks\EventBus\EventBus.RabbitMq\EventBus.RabbitMq.csproj", "{8D3FB9F0-E32E-4798-9994-2CBAFE947711}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.RabbitMq", "src\BuildingBlocks\EventBus\EventBus.RabbitMq\EventBus.RabbitMq.csproj", "{8D3FB9F0-E32E-4798-9994-2CBAFE947711}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWebApp", "BlazorWebApp", "{1D8111B1-E42C-430E-A154-267E2A8ECC36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "src\Clients\BlazorWebApp\WebApp\WebApp.csproj", "{A1592C86-C298-4729-BC46-97E206FDD3F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "src\Clients\BlazorWebApp\WebApp\WebApp.csproj", "{A1592C86-C298-4729-BC46-97E206FDD3F1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketService", "BasketService", "{017FE9D9-17BC-4586-A880-0AC058194A49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Api", "src\Services\BasketService\BasketService.Api\BasketService.Api.csproj", "{2088BABE-60BD-40C8-882A-C00EA9281895}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Api", "src\Services\BasketService\BasketService.Api\BasketService.Api.csproj", "{2088BABE-60BD-40C8-882A-C00EA9281895}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatalogService", "CatalogService", "{D15305F9-7353-4A7D-8B6C-FE1138981A7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Api", "src\Services\CatalogService\CatalogService.Api\CatalogService.Api.csproj", "{9CAF8779-DB44-4469-B88C-6B3990237541}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Api", "src\Services\CatalogService\CatalogService.Api\CatalogService.Api.csproj", "{9CAF8779-DB44-4469-B88C-6B3990237541}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "IdentityService", "{F5F8F956-C324-4C87-9198-8FFCF22B93D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService.Api", "src\Services\IdentityService\IdentityService.Api\IdentityService.Api.csproj", "{11137840-8E08-42C7-8C9C-10C8627D202F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService.Api", "src\Services\IdentityService\IdentityService.Api\IdentityService.Api.csproj", "{11137840-8E08-42C7-8C9C-10C8627D202F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationService", "NotificationService", "{D29CBE60-38DB-4BC2-8753-8664740893D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService.Console", "src\Services\NotificationService\NotificationService.Console\NotificationService.Console.csproj", "{C479DD22-C031-41D8-89B5-BC1910A003AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationService.Console", "src\Services\NotificationService\NotificationService.Console\NotificationService.Console.csproj", "{C479DD22-C031-41D8-89B5-BC1910A003AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderService", "OrderService", "{99505E9D-93D8-4E06-814A-DC4566CBCA48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Domain", "src\Services\OrderService\OrderService.Domain\OrderService.Domain.csproj", "{F735077E-8B8F-4555-B48E-242A418FE822}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Domain", "src\Services\OrderService\OrderService.Domain\OrderService.Domain.csproj", "{F735077E-8B8F-4555-B48E-242A418FE822}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application", "src\Services\OrderService\OrderService.Application\OrderService.Application.csproj", "{5D0F8B2D-1A3C-47AC-9C3F-3FD18AD3D5B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Application", "src\Services\OrderService\OrderService.Application\OrderService.Application.csproj", "{5D0F8B2D-1A3C-47AC-9C3F-3FD18AD3D5B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Infrastructure", "src\Services\OrderService\OrderService.Infrastructure\OrderService.Infrastructure.csproj", "{2DC30D08-D4D8-4EB3-9B9A-D35FC64EA0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Infrastructure", "src\Services\OrderService\OrderService.Infrastructure\OrderService.Infrastructure.csproj", "{2DC30D08-D4D8-4EB3-9B9A-D35FC64EA0D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.WebAPI", "src\Services\OrderService\OrderService.WebAPI\OrderService.WebAPI.csproj", "{F110F6E8-834D-4E2F-AF72-C25043EF6334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.WebAPI", "src\Services\OrderService\OrderService.WebAPI\OrderService.WebAPI.csproj", "{F110F6E8-834D-4E2F-AF72-C25043EF6334}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentService", "PaymentService", "{346EFBB2-0E85-444B-9805-52172E50B1E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentService.Api", "src\Services\PaymentService\PaymentService.Api\PaymentService.Api.csproj", "{0AC51D19-272F-44F0-A666-48A9F0A848B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService.Api", "src\Services\PaymentService\PaymentService.Api\PaymentService.Api.csproj", "{0AC51D19-272F-44F0-A666-48A9F0A848B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Factory", "src\BuildingBlocks\EventBus\EventBus.Factory\EventBus.Factory.csproj", "{C49A9BBE-095E-415B-9D09-6CD1963F2B69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,10 +80,6 @@ Global
 		{992D670B-000B-443F-BAD3-42EED63DE84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{992D670B-000B-443F-BAD3-42EED63DE84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{992D670B-000B-443F-BAD3-42EED63DE84D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{188C68AA-9A63-4284-9FE5-0EB50CB31203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{188C68AA-9A63-4284-9FE5-0EB50CB31203}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{188C68AA-9A63-4284-9FE5-0EB50CB31203}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{188C68AA-9A63-4284-9FE5-0EB50CB31203}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82882714-CD26-4269-8621-C054A0B85118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{82882714-CD26-4269-8621-C054A0B85118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82882714-CD26-4269-8621-C054A0B85118}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -132,6 +128,10 @@ Global
 		{0AC51D19-272F-44F0-A666-48A9F0A848B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AC51D19-272F-44F0-A666-48A9F0A848B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AC51D19-272F-44F0-A666-48A9F0A848B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C49A9BBE-095E-415B-9D09-6CD1963F2B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C49A9BBE-095E-415B-9D09-6CD1963F2B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C49A9BBE-095E-415B-9D09-6CD1963F2B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C49A9BBE-095E-415B-9D09-6CD1963F2B69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -145,7 +145,6 @@ Global
 		{146B03B9-27D3-47AF-8E40-9BC24ED48450} = {60322427-9A2E-4487-8651-0E864E7B62C4}
 		{9D79DFEB-D8F5-4C11-BBC5-BD71EA34045B} = {FFB73C4B-6D6D-4818-B7B5-A9795AE9F0AE}
 		{992D670B-000B-443F-BAD3-42EED63DE84D} = {9D79DFEB-D8F5-4C11-BBC5-BD71EA34045B}
-		{188C68AA-9A63-4284-9FE5-0EB50CB31203} = {FFB73C4B-6D6D-4818-B7B5-A9795AE9F0AE}
 		{82882714-CD26-4269-8621-C054A0B85118} = {9D79DFEB-D8F5-4C11-BBC5-BD71EA34045B}
 		{8D3FB9F0-E32E-4798-9994-2CBAFE947711} = {9D79DFEB-D8F5-4C11-BBC5-BD71EA34045B}
 		{1D8111B1-E42C-430E-A154-267E2A8ECC36} = {46FDF102-A062-437B-BE55-9D8AD4864FC8}
@@ -165,6 +164,7 @@ Global
 		{F110F6E8-834D-4E2F-AF72-C25043EF6334} = {99505E9D-93D8-4E06-814A-DC4566CBCA48}
 		{346EFBB2-0E85-444B-9805-52172E50B1E7} = {99F1383D-7039-45CC-B2C6-9E1DB5532AB6}
 		{0AC51D19-272F-44F0-A666-48A9F0A848B0} = {346EFBB2-0E85-444B-9805-52172E50B1E7}
+		{C49A9BBE-095E-415B-9D09-6CD1963F2B69} = {9D79DFEB-D8F5-4C11-BBC5-BD71EA34045B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9DF4F3FA-E2B6-4828-BFA6-6472233CF988}
