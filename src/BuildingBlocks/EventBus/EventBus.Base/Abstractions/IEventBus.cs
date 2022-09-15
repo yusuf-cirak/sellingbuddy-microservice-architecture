@@ -7,7 +7,7 @@ using EventBus.Base.Events;
 
 namespace EventBus.Base.Abstractions
 {
-    public interface IEventBus
+    public interface IEventBus:IDisposable
     {
         void Publish(IntegrationEvent @event);
 

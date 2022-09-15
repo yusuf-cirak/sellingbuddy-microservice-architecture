@@ -12,27 +12,27 @@ namespace EventBus.Base.Events
 {
     public abstract class BaseEventBus:IEventBus
     {
-        private readonly IServiceProvider _serviceProvider;
-        private readonly IEventBusSubscriptionManager _eventBusSubscriptionManager;
-        private EventBusConfig _eventBusConfig;
+        public readonly IServiceProvider ServiceProvider;
+        public readonly IEventBusSubscriptionManager EventBusSubscriptionManager;
+        public EventBusConfig EventBusConfig { get; set; }
 
         protected BaseEventBus(IServiceProvider serviceProvider, EventBusConfig eventBusConfig)
         {
-            _serviceProvider = serviceProvider;
-            _eventBusSubscriptionManager = new InMemoryEventBusSubscriptionManager(ProcessEventName);
-            _eventBusConfig = eventBusConfig;
+            ServiceProvider = serviceProvider;
+            EventBusSubscriptionManager = new InMemoryEventBusSubscriptionManager(ProcessEventName);
+            EventBusConfig = eventBusConfig;
         }
 
         public virtual string ProcessEventName(string eventName)
         {
-            if (_eventBusConfig.DeleteEventPrefix)
+            if (EventBusConfig.DeleteEventPrefix)
             {
-                eventName = eventName.TrimStart(_eventBusConfig.EventNamePrefix.ToArray());
+                eventName = eventName.TrimStart(EventBusConfig.EventNamePrefix.ToArray());
             }
 
-            if (_eventBusConfig.DeleteEventSuffix)
+            if (EventBusConfig.DeleteEventSuffix)
             {
-                eventName = eventName.TrimEnd(_eventBusConfig.EventNameSuffix.ToArray());
+                eventName = eventName.TrimEnd(EventBusConfig.EventNameSuffix.ToArray());
             }
 
             return eventName;
@@ -40,29 +40,34 @@ namespace EventBus.Base.Events
 
         public virtual string GetSubName(string eventName)
         {
-            return $"{_eventBusConfig.SubscriberClientAppName}.{ProcessEventName(eventName)}";
+            return $"{EventBusConfig.SubscriberClientAppName}.{ProcessEventName(eventName)}";
         }
 
-        public virtual void Dispose() => _eventBusConfig = null;
+        public virtual void Dispose()
+        {
+            EventBusConfig = null;
+            EventBusSubscriptionManager.Clear();
+
+        }
 
         public async Task<bool> ProcessEvent(string eventName, string message)
         {
             eventName=ProcessEventName(eventName);
 
             var processed = false;
-            if (_eventBusSubscriptionManager.HasSubscriptionsForEvent(eventName))
+            if (EventBusSubscriptionManager.HasSubscriptionsForEvent(eventName))
             {
-                var subscriptions = _eventBusSubscriptionManager.GetHandlersForEvent(eventName);
+                var subscriptions = EventBusSubscriptionManager.GetHandlersForEvent(eventName);
 
-                using (_serviceProvider.CreateScope())
+                using (ServiceProvider.CreateScope())
                 {
                     foreach (SubscriptionInfo subscription in subscriptions)
                     {
-                        var handler = _serviceProvider.GetService(subscription.HandleType);
+                        var handler = ServiceProvider.GetService(subscription.HandleType);
                         if(handler==null) continue;
 
-                        var eventType = _eventBusSubscriptionManager.GetEventTypeByName(
-                            $"{_eventBusConfig.EventNamePrefix}{eventName}{_eventBusConfig.EventNameSuffix}");
+                        var eventType = EventBusSubscriptionManager.GetEventTypeByName(
+                            $"{EventBusConfig.EventNamePrefix}{eventName}{EventBusConfig.EventNameSuffix}");
 
                         var integrationEvent = JsonConvert.DeserializeObject(message, eventType);
 

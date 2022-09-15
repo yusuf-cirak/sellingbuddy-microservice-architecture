@@ -65,11 +65,11 @@ namespace EventBus.Base.SubscriptionManagers
             
             RemoveSubscriptionHandler(eventName,handlerToRemove);
         }
-        private void RemoveSubscriptionHandler(string eventName, SubscriptionInfo? subsToRemove)
+        private void RemoveSubscriptionHandler(string eventName, SubscriptionInfo? subToRemove)
         {
-            if (subsToRemove != null)
+            if (subToRemove != null)
             {
-                _handlers[eventName].Remove(subsToRemove);
+                _handlers[eventName].Remove(subToRemove);
                 if (_handlers[eventName].Any())
                 {
                     _handlers.Remove(eventName);
