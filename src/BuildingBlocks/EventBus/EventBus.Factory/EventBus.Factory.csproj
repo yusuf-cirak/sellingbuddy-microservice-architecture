@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EventBus.AzureServiceBus\EventBus.AzureServiceBus.csproj" />
     <ProjectReference Include="..\EventBus.Base\EventBus.Base.csproj" />
+    <ProjectReference Include="..\EventBus.RabbitMq\EventBus.RabbitMq.csproj" />
   </ItemGroup>
 
 </Project>
